@@ -39,9 +39,6 @@ span {
 	opacity:0;
 	transition: all 1s;
 }
-span:after {
-	content:' ';
-}
 .hi {
 	display:inline;
 	opacity:1;
@@ -51,18 +48,41 @@ span:nth-child(2) {
 	display:inline;
 }
 a {
-	background:#cceeff;
-	animation: bgcolorcycle 10s linear alternate infinite;
 	transition: all 1s;
 	text-decoration:none;
 	cursor:pointer;
 	color:#666;
+	position:relative;
 }
-a:hover {
-	animation:none;
-	background:#bbffff;
+a:before {
+	content:'';
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:#cceeff;
+	animation: bgcolorcycle 10s linear alternate infinite;
 	transition: all 1s;
+	left:0;
+	top:0;
+	z-index:-2;
+}
+a:after {
+	content:'';
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:#bbffff;
 	cursor:pointer;
+	left:0;
+	top:0;
+	z-index:-1;
+	opacity:0;
+}
+a:hover:after {
+	opacity:1;
+}
+a.cleared {
+	pointer-events:none;
 }
 a.cleared:hover {
 	animation:none;
@@ -148,7 +168,7 @@ a.cleared:hover {
 .okhand img {
 	height:100%;
 }
-.intro .cleared {
+.intro .cleared:before {
 	animation:none;
 	background:transparent;
 	pointer-events: none;
