@@ -46,6 +46,7 @@ span:nth-child(2) {
 	display:inline;
 }
 a {
+<<<<<<< HEAD
 	background:#ddd;
 	transition: all 0.25s;
 	text-decoration:none;
@@ -68,6 +69,43 @@ a.cleared {
 	pointer-events:none;
 	color:#444;
 	animation:none;
+=======
+	transition: all 1s;
+	text-decoration:none;
+	cursor:pointer;
+	color:#666;
+	position:relative;
+}
+a:before {
+	content:'';
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:#cceeff;
+	animation: bgcolorcycle 10s linear alternate infinite;
+	transition: all 1s;
+	left:0;
+	top:0;
+	z-index:-2;
+}
+a:after {
+	content:'';
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:#bbffff;
+	cursor:pointer;
+	left:0;
+	top:0;
+	z-index:-1;
+	opacity:0;
+}
+a:hover:after {
+	opacity:1;
+}
+a.cleared {
+	pointer-events:none;
+>>>>>>> master
 }
 a.cleared:hover {
 	background:transparent;
@@ -103,6 +141,10 @@ a.cleared:hover {
 	margin-top:100px;
 }
 .intro .cleared:before {
+<<<<<<< HEAD
+=======
+	animation:none;
+>>>>>>> master
 	background:transparent;
 	pointer-events: none;
 }
