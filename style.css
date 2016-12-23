@@ -46,7 +46,6 @@ span:nth-child(2) {
 	display:inline;
 }
 a {
-<<<<<<< HEAD
 	background:#ddd;
 	transition: all 0.25s;
 	text-decoration:none;
@@ -69,7 +68,6 @@ a.cleared {
 	pointer-events:none;
 	color:#444;
 	animation:none;
-=======
 	transition: all 1s;
 	text-decoration:none;
 	cursor:pointer;
@@ -105,7 +103,6 @@ a:hover:after {
 }
 a.cleared {
 	pointer-events:none;
->>>>>>> master
 }
 a.cleared:hover {
 	background:transparent;
@@ -141,10 +138,7 @@ a.cleared:hover {
 	margin-top:100px;
 }
 .intro .cleared:before {
-<<<<<<< HEAD
-=======
 	animation:none;
->>>>>>> master
 	background:transparent;
 	pointer-events: none;
 }
