@@ -1,58 +1,82 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Lora|Unica+One" rel="stylesheet">
+	<link href="baloo.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style>
+		.introduction {
+			font-family:'Lora';
+			font-size:3rem;
+			line-height:4.25rem;
+			color:#444;
+		}
+		ul{
+			list-style:none;
+			width:47%;
+			margin:2% 2% 2% 1%;
+			padding:0;
+			float:left;
+		}
+		ul:first-child{
+			margin:2% 1% 2% 2%;
+		}
+		ul li {
+			display:inline-block;
+			width:100%;
+			margin-bottom:2%;
+			padding:0;
+			text-align:center;
+		}
+		img {
+			width:100%;
+		}
+		@media (max-width:768px) {
+			ul {
+				width:96%;
+				margin:2% 2% 0% 2%;
+				padding:0;
+				float:none;
+			}
+		}
+	</style>
 </head>
 
 <body>
-	<header>
-		<div class="logo">
-			<img src="SGlogo.svg">
+	<!-- <div class="headimg_wrapper">
+		<div class="headimg">
+			<img src="walkerBW.jpg">
 		</div>
-	</header>
-	<div class="headimg"><img src="walker_screen_square.jpg"></div>
-	<div class="intro">
-		<span class="hi"><a class="continue">Hi.</a></span>
-		<span>My name is Sam Gordon, and I'm an <a class="continue">interactive designer</a>.</span>
-		<span>I craft <a class="continue">custom digital experiences</a> that tell stories and solve problems.</span>
-		<span>I work with people who seek personal, collaborative solutions to unique <a class="continue showall">creative challenges</a>.</span>
-		<span class="newParagraph">
-			My clients come from various backgrounds&mdash;including music, food, and photography&mdash;and each has an important story to tell.
-		</span>
-	</div>
-	<div class="portfolio">
-		<div class="work gndwire">
-			<img src="http://www.gndwire.com/wp-content/uploads/2016/03/jmn_bg_2.jpg">
+	</div> -->
+	<div class="container introduction">
+		<div class="row">
+			<div class="twelve columns intro">
+				Hi. My name is Sam Gordon, and I'm an interactive designer. I'm working on some new projects at the moment, but for the time being here's a handful of my work. Feel free to <a href="https://instagram.com/samadam444" target="_blank">follow me on Instagram</a> or <a href="mailto:hello@samgordon.net">reach out</a> if you'd like to talk.
+			</div>
+		</div> <!--END ROW-->
+		<div class="row">
+			<div class="twelve columns">
+				<ul>
+					<li><img src="construction/newiso1-01.jpg"></li>
+					<li><img src="construction/plr1.jpg"></li>
+					<li><img src="construction/flyer_coaster.jpg"></li>
+					<li><img src="construction/aussieacres1.jpg"></li>
+					<li><img src="construction/newiso3-01.jpg"></li>
+				</ul>
+				<ul>
+					<li><img src="construction/gndwire_screen.jpg"></li>
+					<li><img src="construction/waterslide.jpg"></li>
+					<li><img src="construction/HB_LP.jpg"></li>
+					<li><img src="construction/plr2.jpg"></li>
+					<li><img src="construction/doomtree_screen.jpg"></li>
+					<li><img src="construction/aussieacres2.jpg"></li>
+					<li><img src="construction/desaschef.jpg"></li>
+				</ul>
+			</div>
 		</div>
-		<div class="work lakewinds">
-			<img src="https://www.lakewinds.coop/wp-content/uploads/2016/10/pumpkin-background.jpg">
-		</div>
-		<div class="work polaroid">
-			<img src="snap_alot.jpg">
-		</div>
-		<div class="work haleybonar">
-			<img src="https://unsplash.it/1400/800">
-		</div>
-		<div class="work doomtree">
-			<img src="https://unsplash.it/1400/800">
-		</div>
-		<div class="work aussieacres">
-			<img src="https://unsplash.it/1400/800">
-		</div>
-	</div>
-	<div class="outro">
-		<span><a href="https://clockwork.com" target="_blank">Clockwork</a> is my main gig, but I'm always looking for opportunities to explore and experiment in my free time. If you have an idea and need a code-minded designer to make it happen, <a href="mailto:hello@samgordon.net">let's talk</a>.</span>
-		<div class="social">
-			<span><a href="https://instagram.com/samadam444" target="_blank">Instagram</a></span>
-			<span><a href="https://instagram.com/samadam444" target="_blank">Medium</a></span>
-			<span><a href="https://instagram.com/samadam444" target="_blank">Codepen</a></span>
-		</div>
-		<div class="okhand"><img src="OKhand.svg"></div>
-	</div>
-<script src="app.js"></script>
+	</div> <!--END CONTAINER-->
 </body>
 
 <!--
