@@ -1,91 +1,77 @@
+html {font-size:100%;}
 body{
+	top:0;
+	left:0;
 	margin:0;
 	opacity:0;
 	animation: fadein 1s 1s forwards;
-	background:#fafafa;
-}
-header {
-	position:fixed;
-	top:50px;
-	left:50px;
-	z-index:1000;
+	background:#1e1e1e;
+	background:radial-gradient(ellipse, #000, #1e1e1e);
+	background-attachment:fixed;
 }
 .logo {
 	display:block;
-}
-.logo img {
 	width:30px;
+	position:fixed;
+	margin-left:-80px;
+	margin-top:18px;
+	z-index:1000;
 }
+
+/* INTRO */
 .intro {
-	max-width:900px;
-	margin:100px auto 100px;
-	padding:80px;
+	margin:150px auto;
+	padding:20px;
 }
 @keyframes fadein {
 	from {opacity:0;}
 	to {opacity:1;}
 }
-@keyframes bgcolorcycle {
-	from {background-color:#FBBC05;}
-	to {background-color:#FAA6FB;}
-}
 span {
 	font-family:'Lora';
-	font-size:3.25rem;
-	line-height:4.75rem;
-	color:#666;
+	font-size:3rem;
+	line-height:4.25rem;
+	color:#eee;
 	pointer-events: none;
 	display:none;
 	opacity:0;
 	transition: all 1s;
 }
 .hi {
+	position:relative;
 	display:inline;
 	opacity:1;
 	pointer-events: visible;
+	transform-origin:center center;
 }
 span:nth-child(2) {
 	display:inline;
 }
 a {
-	transition: all 1s;
+	background:#e6e6e6;
+	transition: all 0.25s;
 	text-decoration:none;
 	cursor:pointer;
-	color:#666;
+	color:#1e1e1e;
 	position:relative;
 }
-a:before {
-	content:'';
-	width:100%;
-	height:100%;
-	position:absolute;
-	background:#cceeff;
-	animation: bgcolorcycle 10s linear alternate infinite;
-	transition: all 1s;
-	left:0;
-	top:0;
-	z-index:-2;
+a:hover {
+	background:#FAA6FB;
 }
-a:after {
-	content:'';
-	width:100%;
-	height:100%;
-	position:absolute;
-	background:#bbffff;
-	cursor:pointer;
-	left:0;
-	top:0;
-	z-index:-1;
-	opacity:0;
+@keyframes bgcolorcycle {
+	from {background-color:#FBBC05;}
+	to {background-color:#FAA6FB;}
 }
-a:hover:after {
-	opacity:1;
+a.cleared:before {
+	display:none;
 }
 a.cleared {
+	background:transparent;
 	pointer-events:none;
+	color:#e6e6e6;
+	animation:none;
 }
 a.cleared:hover {
-	animation:none;
 	background:transparent;
 }
 .intro .exists.newParagraph {
@@ -93,56 +79,12 @@ a.cleared:hover {
 	margin-top:3rem;
 }
 .portfolio {
-	max-width:100%;
-	margin:0 auto;
 	display:none;
 	position:relative;
 }
-.portfolio img {
-	width:100%;
-}
-.portfolio .workheader {
-	background:white;
-	width:100%;
-	max-width:900px;
-	top:105px;
-	left:50%;
-	transform:translateX(-50%);
-	color:#444;
-	font-family:'Unica One';
-	text-transform:uppercase;
-	transition:all 0.6s;
-	position:fixed;
-	opacity:0;
-	z-index:100;
-}
-.work {
-	max-height:800px;
-	overflow:hidden;
-}
-.workheader h2 {
-	font-size:1.5rem;
-	display:inline;
-	position:relative;
-}
-.workheader h2:after {
-	content:'';
-	height:1px;
-	width:50px;
-	position:absolute;
-	top:50%;
-	margin:0 10px;
-	background:#444;
-}
-.workheader h3 {
-	font-size:1.5rem;
-	display:inline;
-	margin-left:70px;
-}
 .outro {
-	max-width:900px;
-	margin:100px auto;
-	padding:80px;
+	margin:150px auto;
+	padding:20px;
 	display:none;
 }
 .outro span {
@@ -155,21 +97,14 @@ a.cleared:hover {
 	text-align:center;
 }
 .social span {
-	margin:0 25px;
+	margin:25px;
 	text-align:center;
 }
 .okhand {
-	max-height:36px;
-	position:absolute;
-	margin:100px 0;
-	left:50%;
-	transform:translateX(-50%);
-}
-.okhand img {
-	height:100%;
+	max-height:48px;
+	margin-top:100px;
 }
 .intro .cleared:before {
-	animation:none;
 	background:transparent;
 	pointer-events: none;
 }
@@ -183,33 +118,38 @@ a.cleared:hover {
 	opacity:1;
 	pointer-events: auto;
 }
-
 .headimg {
 	position:fixed;
-	width:30%;
-	right:100px;
-	top:50vh;
-	transform: translate3d(0, -50%, 0);
-	-webkit-transform: translate3d(0, -50%, 0);
+	max-width:1000px;
+	width:100%;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
 	z-index:-100;
-	background:url('walker_screen_square_blurred.jpg');
+	background:url('walkerBW_blurred.jpg');
 	background-size:100%;
+	line-height:0;
 }
 .headimg img {
   -webkit-transform: translate3d(0, 0, 0);
   width:100%;
   -webkit-filter:blur(100px);
+  line-height:0;
 }
 
-@media (max-width:1170px) {
-	header {
-		padding-top:103px;
-		left:calc((100% - 800px) / 4);
+@media (max-width:500px) {
+	span {
+		font-size:2.25rem;
+		line-height:3rem;
 	}
-	.logo img {
-		width:30px;
+	.social {
+		margin-top:80px;
 	}
-	.intro {
-		max-width:800px;
+	.social span {
+		margin:20px;
+	}
+	.okhand {
+		margin-top:80px;
+		margin-bottom:80px;
 	}
 }
