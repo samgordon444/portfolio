@@ -5,9 +5,7 @@ body{
 	margin:0;
 	opacity:0;
 	animation: fadein 1s 1s forwards;
-	background:#1e1e1e;
-	background:radial-gradient(ellipse, #000, #1e1e1e);
-	background-attachment:fixed;
+	background:#f6f6f6;
 }
 .logo {
 	display:block;
@@ -31,7 +29,7 @@ span {
 	font-family:'Lora';
 	font-size:3rem;
 	line-height:4.25rem;
-	color:#eee;
+	color:#444;
 	pointer-events: none;
 	display:none;
 	opacity:0;
@@ -48,15 +46,15 @@ span:nth-child(2) {
 	display:inline;
 }
 a {
-	background:#e6e6e6;
+	background:#ddd;
 	transition: all 0.25s;
 	text-decoration:none;
 	cursor:pointer;
-	color:#1e1e1e;
+	color:#111;
 	position:relative;
 }
 a:hover {
-	background:#FAA6FB;
+	background:#ffcc00;
 }
 @keyframes bgcolorcycle {
 	from {background-color:#FBBC05;}
@@ -68,7 +66,7 @@ a.cleared:before {
 a.cleared {
 	background:transparent;
 	pointer-events:none;
-	color:#e6e6e6;
+	color:#444;
 	animation:none;
 }
 a.cleared:hover {
