@@ -1,3 +1,4 @@
+/* ----- GLOBAL ----- */
 html {font-size:100%;}
 body{
 	top:0;
@@ -7,99 +8,104 @@ body{
 	animation: fadein 1s 1s forwards;
 	background:#f6f6f6;
 }
-.logo {
-	display:block;
-	width:30px;
-	position:fixed;
-	margin-left:-80px;
-	margin-top:18px;
-	z-index:1000;
-}
-
-/* INTRO */
-.intro {
-	margin:150px auto;
-	padding:20px;
-}
 @keyframes fadein {
 	from {opacity:0;}
 	to {opacity:1;}
 }
 span {
-	font-family:'Lora';
+	font-family:'Ovo';
 	font-size:3rem;
 	line-height:4.25rem;
 	color:#444;
+}
+h1, h2, h3, p{
+	font-family:'Ovo';
+	color:#eee;
+	display:inline;
+}
+h1 {
+	font-family:'Ovo';
+	font-size:2.5rem;
+	font-weight:400;
+	line-height:3rem;
+	padding:0 0.5rem;
+}
+h2 {
+	font-family:'Muli';
+	font-size: 1rem;
+	font-weight:700;
+	line-height:1.5rem;
+	text-transform:uppercase;
+	letter-spacing:2.5px;
+	padding:0 0.5rem;
+}
+a {
+	transition: all 0.25s;
+	text-decoration:underline;
+	cursor:pointer;
+	color:#111;
+	position:relative;
+}
+a:hover, .portfolio a:hover {
+	background:#444;
+	color:#f6f6f6;
+	text-decoration:none;
+}
+@media (max-width:500px) {
+	span {
+		font-size:2.25rem;
+		line-height:3rem;
+	}
+}
+.headimg {
+	position:fixed;
+	max-width:1000px;
+	width:100%;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	z-index:-100;
+	background:url('walkerBW_blurred.jpg');
+	background-size:100%;
+	line-height:0;
+	opacity:1;
+}
+.headimg img {
+  -webkit-transform: translate3d(0, 0, 0);
+  width:100%;
+  -webkit-filter:blur(100px);
+  line-height:0;
+}
+
+/* ----- INTRO ----- */
+.intro {
+	margin:150px auto;
+}
+.intro span {
 	pointer-events: none;
 	display:none;
 	opacity:0;
-	transition: all 1s;
+	transition: all 0.25s;
 }
-.hi {
+.intro .hi {
 	position:relative;
 	display:inline;
 	opacity:1;
 	pointer-events: visible;
 	transform-origin:center center;
 }
-span:nth-child(2) {
+.intro span:nth-child(2) {
 	display:inline;
-}
-a {
-	background:#ddd;
-	transition: all 0.25s;
-	text-decoration:none;
-	cursor:pointer;
-	color:#111;
-	position:relative;
-}
-a:hover {
-	background:#ffcc00;
-}
-@keyframes bgcolorcycle {
-	from {background-color:#FBBC05;}
-	to {background-color:#FAA6FB;}
-}
-a.cleared:before {
-	display:none;
 }
 a.cleared {
 	background:transparent;
 	pointer-events:none;
 	color:#444;
 	animation:none;
-	transition: all 1s;
+	transition: all 0.25s;
 	text-decoration:none;
 	cursor:pointer;
-	color:#666;
 	position:relative;
-}
-a:before {
-	content:'';
-	width:100%;
-	height:100%;
-	position:absolute;
-	background:#cceeff;
-	animation: bgcolorcycle 10s linear alternate infinite;
-	transition: all 1s;
-	left:0;
-	top:0;
-	z-index:-2;
-}
-a:after {
-	content:'';
-	width:100%;
-	height:100%;
-	position:absolute;
-	background:#bbffff;
-	cursor:pointer;
-	left:0;
-	top:0;
-	z-index:-1;
-	opacity:0;
-}
-a:hover:after {
-	opacity:1;
 }
 a.cleared {
 	pointer-events:none;
@@ -111,13 +117,45 @@ a.cleared:hover {
 	display:inline-block;
 	margin-top:3rem;
 }
-.portfolio {
+.intro .cleared:before {
+	background:transparent;
+	pointer-events: none;
+}
+.intro .exists {
+	display:inline;
+}
+.intro .visible {
+	opacity:1;
+	pointer-events: auto;
+}
+
+/* ----- PORTFOLIO ----- */
+.portfolio-wrap {
+	width:100%;
 	display:none;
+	background:#222222;
+	margin-top:80vh;
+	padding:80px 0 100px;
+}
+.portfolio {
 	position:relative;
 }
+.portfolio img {
+	width:100%;
+}
+.portfolio .piece {
+	padding:100px 0;
+	line-height:0;
+	position:relative;
+}
+.portfolio a {
+	color:#eee;
+}
+
+/* ----- OUTRO ----- */
 .outro {
 	margin:150px auto;
-	padding:20px;
+	padding:0 20px;
 	display:none;
 }
 .outro span {
@@ -133,57 +171,24 @@ a.cleared:hover {
 	margin:25px;
 	text-align:center;
 }
-.okhand {
+.logo {
 	max-height:48px;
 	margin-top:100px;
 }
-.intro .cleared:before {
-	animation:none;
-	background:transparent;
-	pointer-events: none;
-}
-.intro .exists {
-	display:inline;
-}
-.exists {
-	display:block;
-}
-.intro .visible {
-	opacity:1;
-	pointer-events: auto;
-}
-.headimg {
-	position:fixed;
-	max-width:1000px;
-	width:100%;
-	left:50%;
-	top:50%;
-	transform:translate(-50%,-50%);
-	z-index:-100;
-	background:url('walkerBW_blurred.jpg');
-	background-size:100%;
-	line-height:0;
-}
-.headimg img {
-  -webkit-transform: translate3d(0, 0, 0);
-  width:100%;
-  -webkit-filter:blur(100px);
-  line-height:0;
-}
-
 @media (max-width:500px) {
-	span {
-		font-size:2.25rem;
-		line-height:3rem;
-	}
 	.social {
 		margin-top:80px;
 	}
 	.social span {
 		margin:20px;
 	}
-	.okhand {
+	.logo {
 		margin-top:80px;
 		margin-bottom:80px;
 	}
+}
+
+/* ----- REVEAL END-STATE ----- */
+.exists {
+	display:block;
 }

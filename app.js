@@ -6,7 +6,7 @@ $('a.continue').click( function() {
     $(this).parent().next().next().addClass('exists');
 } );
 $('a.showall').click( function() {
-	$('.portfolio').addClass('exists');
+	$('.portfolio-wrap').addClass('exists');
 	$('.outro').addClass('exists');
 } );
 
@@ -19,40 +19,21 @@ var img = $('.headimg img');
 
 $window.on('scroll', function() {
   var st = $(this).scrollTop(),
-    pixs = 100 - (st / 2);
-  if (st < 200) {
+    pixs = 100 - (st / 5);
+  if (st < 500) {
     img.css ({
       '-webkit-filter': 'blur('+pixs+'px)'
     })
-  } else {
+  } else if ( st >= 500 && st < 2000) {
     img.css ({
-      '-webkit-filter': 'blur(0px)'
+      '-webkit-filter': 'blur(0px)',
     })
-  }
-});
-
-
-/* // PORTFOLIO TITLES
-var work = $('.work');
-$(this).work.on('scroll', function () {
-  var scrollTop = $(window).scrollTop(),
-    elementOffset = $('.work').offset().top,
-    scrollOn = (elementOffset - scrollTop),
-    scrollOff = (scrollOn + $('.work').height() ),
-    header = $('.workheader');
-
-  if (scrollOn > 80) {
-    header.css({
-      'opacity': (0)
-    })
-  } else if (scrollOff < 200) {
-    header.css({
-      'opacity': (0)
+    divs.css ({
+      'opacity': '1',
     })
   } else {
-    header.css({
-      'opacity': (1)
+    divs.css ({
+      'opacity': '0'
     })
   }
 });
-*/
