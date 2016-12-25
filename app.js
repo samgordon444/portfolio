@@ -30,29 +30,3 @@ $window.on('scroll', function() {
     })
   }
 });
-
-
-/* // PORTFOLIO TITLES
-var work = $('.work');
-$(this).work.on('scroll', function () {
-  var scrollTop = $(window).scrollTop(),
-    elementOffset = $('.work').offset().top,
-    scrollOn = (elementOffset - scrollTop),
-    scrollOff = (scrollOn + $('.work').height() ),
-    header = $('.workheader');
-
-  if (scrollOn > 80) {
-    header.css({
-      'opacity': (0)
-    })
-  } else if (scrollOff < 200) {
-    header.css({
-      'opacity': (0)
-    })
-  } else {
-    header.css({
-      'opacity': (1)
-    })
-  }
-});
-*/
