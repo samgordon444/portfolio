@@ -226,7 +226,7 @@ a.cleared:hover {
 	    line-height: 1.85rem;
 	}
 	.portfolio a {
-		box-shadow: 0 1.3rem #fff inset;
+		box-shadow: 0 1.35rem #fff inset;
 	}
 	.portfolio a:hover {
 		box-shadow: 0 0.8rem #fff inset;
