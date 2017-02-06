@@ -188,7 +188,7 @@ a.cleared:hover {
 	display:block;
 }
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:425px){
 	.row {
 		margin:60px auto;
 	}
