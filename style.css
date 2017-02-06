@@ -229,7 +229,7 @@ a.cleared:hover {
 		box-shadow: 0 1.28rem #fff inset;
 	}
 	.portfolio a:hover {
-		box-shadow: 0 0.9rem #fff inset;
+		box-shadow: 0 1rem #fff inset;
 	}
 	.portfolio img {
 		position:relative;
