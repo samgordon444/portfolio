@@ -129,7 +129,6 @@ a.cleared:hover {
 }
 .portfolio .work {
 	position:relative;
-	height:800px;
 }
 .portfolio .work-title {
 	position:absolute;
@@ -157,13 +156,12 @@ a.cleared:hover {
     content: '';
     background: white;
     width: 100%;
-    height: 1px;
+    height: 2px;
     position: absolute;
     top: -1px;
 }
 .portfolio img {
 	width:100%;
-	position:absolute;
 	line-height:0;
 }
 
@@ -188,7 +186,7 @@ a.cleared:hover {
 	display:block;
 }
 
-@media only screen and (max-width:425px){
+@media only screen and (max-width:800px){
 	.row {
 		margin:60px auto;
 	}
@@ -231,7 +229,7 @@ a.cleared:hover {
 		box-shadow: 0 1.28rem #fff inset;
 	}
 	.portfolio a:hover {
-		box-shadow: 0 0.8rem #fff inset;
+		box-shadow: 0 0.9rem #fff inset;
 	}
 	.portfolio img {
 		position:relative;
