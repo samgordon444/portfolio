@@ -11,9 +11,9 @@
 	position:relative;
 	/* Change this to the value of your total container width - note that this number takes into account the 10px outter gutters */
 	/* For content to be 1200px width at 12 columns, set this number to 1200px + 2x padding of this container */
-	max-width:1100px;
+	max-width:1200px;
 	margin:0 auto;
-	padding:0 10px; /* change outter gutter padding */
+	padding:0 15px; /* change outter gutter padding */
 }
 .column,.columns{
 	float:left

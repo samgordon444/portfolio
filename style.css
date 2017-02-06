@@ -12,80 +12,73 @@ body{
 	from {opacity:0;}
 	to {opacity:1;}
 }
-span {
-	font-family:'Ovo';
-	font-size:3rem;
-	line-height:4.25rem;
-	color:#444;
+.row {
+	margin:100px auto;
 }
-h1, h2, h3, p{
+span, h1, p, a {
 	font-family:'Ovo';
-	color:#eee;
-	display:inline;
-}
-h1 {
-	font-family:'Ovo';
-	font-size:2.5rem;
 	font-weight:400;
-	line-height:3rem;
-	padding:0 0.5rem;
+	font-size:2.25rem;
+	line-height:3.25rem;
+	color:#524B59;
 }
-h2 {
-	font-family:'Muli';
-	font-size: 1rem;
-	font-weight:700;
-	line-height:1.5rem;
-	text-transform:uppercase;
-	letter-spacing:2.5px;
-	padding:0 0.5rem;
+p, .portfolio a {
+	font-size:1.5rem;
+	line-height:2.25rem;
 }
 a {
-	transition: all 0.25s;
-	text-decoration:underline;
-	cursor:pointer;
-	color:#111;
 	position:relative;
+	transition: all 0.25s;
+	cursor:pointer;
+	background:#D6BA73;
+  	animation: bgcycle 6s linear infinite;
+  	box-shadow: 0 2.4rem #f6f6f6 inset;
+  	text-decoration:none;
 }
-a:hover, .portfolio a:hover {
-	background:#444;
-	color:#f6f6f6;
+a:hover {
 	text-decoration:none;
+	box-shadow: 0 1.5rem #f6f6f6 inset;
+  	cursor:pointer;
 }
-@media (max-width:500px) {
-	span {
-		font-size:2.25rem;
-		line-height:3rem;
-	}
+
+@keyframes bgcycle {
+  0% {
+    background:#D6BA73;
+  }
+  25% {
+    background:#93AF9A;
+  }
+  50%{
+    background:#93AF9A;
+  }
+  75% {
+    background:#D6BA73;
+  }
+  100% {
+    background:#D6BA73;
+  }
 }
-.headimg {
+
+/* ----- HEADER ----- */
+header {
 	position:fixed;
-	max-width:1000px;
-	width:100%;
-	left:50%;
-	top:50%;
-	transform:translate(-50%,-50%);
-	z-index:-100;
-	background:url('walkerBW_blurred.jpg');
-	background-size:100%;
-	line-height:0;
-	opacity:1;
+	top:40px;
+	left:40px;
+	right:40px;
 }
-.headimg img {
-  -webkit-transform: translate3d(0, 0, 0);
-  width:100%;
-  -webkit-filter:blur(100px);
-  line-height:0;
+.logo {
+	width:24px;
 }
 
 /* ----- INTRO ----- */
 .intro {
-	margin:150px auto;
+	margin:200px auto 100px;
 }
 .intro span {
 	pointer-events: none;
 	display:none;
 	opacity:0;
-	transition: all 0.25s;
+	transition: all 0.6s;
 }
 .intro .hi {
 	position:relative;
@@ -100,9 +93,9 @@ a:hover, .portfolio a:hover {
 a.cleared {
 	background:transparent;
 	pointer-events:none;
-	color:#444;
+	color:#524B59;
 	animation:none;
-	transition: all 0.25s;
+	transition: all 0.6s;
 	text-decoration:none;
 	cursor:pointer;
 	position:relative;
@@ -130,32 +123,80 @@ a.cleared:hover {
 }
 
 /* ----- PORTFOLIO ----- */
-.portfolio-wrap {
-	width:100%;
-	display:none;
-	background:#222222;
-	margin-top:80vh;
-	padding:80px 0 100px;
-}
 .portfolio {
+	display:none;
+}
+.portfolio .work {
 	position:relative;
+	height:800px;
+}
+.portfolio .work-title {
+	position:absolute;
+	left:0;
+	top:50%;
+	transform:translateY(-50%);
+	width:40%;
+	background:#fff;
+	padding:80px 50px;
+}
+.portfolio h1 {
+	line-height:2rem;
+	margin-top:0;
+}
+.portfolio p {
+	margin-bottom:0;
+}
+.portfolio a {
+	box-shadow: 0 1.6rem #fff inset;
+}
+.portfolio a:hover {
+	box-shadow: 0 1rem #fff inset;
+}
+.portfolio a:before {
+    content: '';
+    background: white;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: -1px;
+}
+.portfolio .work-images {
+	position:absolute;
 }
 .portfolio img {
 	width:100%;
+	position:absolute;
 }
-.portfolio .piece {
-	padding:100px 0;
-	line-height:0;
-	position:relative;
+/*.portfolio .work-images img:first-child {
+	z-index:-1;
 }
-.portfolio a {
-	color:#eee;
+.portfolio .work-images img:nth-child(2) {
+	z-index:-2;
 }
+.portfolio .work-images img:nth-child(3) {
+	z-index:-3;
+}
+.portfolio .work:hover .work-images img:first-child {
+	opacity:0;
+}
+.portfolio .work:hover .work-images img:nth-child(2) {
+	animation: imageswitch 1.6s linear infinite;
+}
+.portfolio .work:hover .work-images img:nth-child(3) {
+	animation: imageswitch 1.6s linear 0.8s infinite;
+}
+@keyframes imageswitch {
+	0% {opacity:1;}
+	24% {opacity:1;}
+	25% {opacity:0;}
+	74% {opacity:0;}
+	75% {opacity:1;}
+	100% {opacity:1;}
+}*/
 
 /* ----- OUTRO ----- */
 .outro {
-	margin:150px auto;
-	padding:0 20px;
+	margin:100px auto;
 	display:none;
 }
 .outro span {
@@ -163,29 +204,10 @@ a.cleared:hover {
 	opacity:1;
 	pointer-events: visible;
 }
-.social {
-	margin-top:150px;
-	text-align:center;
-}
-.social span {
-	margin:25px;
-	text-align:center;
-}
-.logo {
-	max-height:48px;
-	margin-top:100px;
-}
-@media (max-width:500px) {
-	.social {
-		margin-top:80px;
-	}
-	.social span {
-		margin:20px;
-	}
-	.logo {
-		margin-top:80px;
-		margin-bottom:80px;
-	}
+.footer {
+	font-family:'Muli';
+	font-size:0.92rem;
+	color:#999;
 }
 
 /* ----- REVEAL END-STATE ----- */
