@@ -200,14 +200,14 @@ a.cleared:hover {
 		left:20px;
 	}
 	span, h1, p, a {
-	    font-size: 1.75rem;
-	    line-height: 2.5rem;
+	    font-size: 1.5rem;
+	    line-height: 2.35rem;
 	}
 	a {
-		box-shadow: 0 1.82rem #f6f6f6 inset;
+		box-shadow: 0 1.58rem #f6f6f6 inset;
 	}
 	a:hover, a:active, a:focus {
-		box-shadow: 0 1.1rem #f6f6f6 inset;
+		box-shadow: 0 1rem #f6f6f6 inset;
 	}
 	.portfolio {
 		padding:0;
@@ -221,7 +221,7 @@ a.cleared:hover {
 	    top: auto;
 	    transform: translateY(-50px);
 	    width: 80%;
-	    padding: 10% 5%;
+	    padding: 40px 20px;
 	}
 	p, .portfolio a {
 	    font-size: 1.25rem;
@@ -229,6 +229,9 @@ a.cleared:hover {
 	}
 	.portfolio a {
 		box-shadow: 0 1.28rem #fff inset;
+	}
+	.portfolio a:hover {
+		box-shadow: 0 0.8rem #fff inset;
 	}
 	.portfolio img {
 		position:relative;
