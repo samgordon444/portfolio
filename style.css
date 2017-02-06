@@ -35,7 +35,7 @@ a {
   	box-shadow: 0 2.4rem #f6f6f6 inset;
   	text-decoration:none;
 }
-a:hover {
+a:hover, a:active, a:focus {
 	text-decoration:none;
 	box-shadow: 0 1.5rem #f6f6f6 inset;
   	cursor:pointer;
@@ -65,6 +65,7 @@ header {
 	top:40px;
 	left:40px;
 	right:40px;
+	z-index:1000;
 }
 .logo {
 	width:24px;
@@ -160,39 +161,11 @@ a.cleared:hover {
     position: absolute;
     top: -1px;
 }
-.portfolio .work-images {
-	position:absolute;
-}
 .portfolio img {
 	width:100%;
 	position:absolute;
+	line-height:0;
 }
-/*.portfolio .work-images img:first-child {
-	z-index:-1;
-}
-.portfolio .work-images img:nth-child(2) {
-	z-index:-2;
-}
-.portfolio .work-images img:nth-child(3) {
-	z-index:-3;
-}
-.portfolio .work:hover .work-images img:first-child {
-	opacity:0;
-}
-.portfolio .work:hover .work-images img:nth-child(2) {
-	animation: imageswitch 1.6s linear infinite;
-}
-.portfolio .work:hover .work-images img:nth-child(3) {
-	animation: imageswitch 1.6s linear 0.8s infinite;
-}
-@keyframes imageswitch {
-	0% {opacity:1;}
-	24% {opacity:1;}
-	25% {opacity:0;}
-	74% {opacity:0;}
-	75% {opacity:1;}
-	100% {opacity:1;}
-}*/
 
 /* ----- OUTRO ----- */
 .outro {
@@ -214,3 +187,57 @@ a.cleared:hover {
 .exists {
 	display:block;
 }
+
+@media only screen and (max-width:800px){
+	.row {
+		margin:60px auto;
+	}
+	.intro {
+		margin:120px auto 0;
+	}
+	header {
+		top:50px;
+		left:20px;
+	}
+	span, h1, p, a {
+	    font-size: 1.75rem;
+	    line-height: 2.5rem;
+	}
+	a {
+		box-shadow: 0 1.82rem #f6f6f6 inset;
+	}
+	a:hover, a:active, a:focus {
+		box-shadow: 0 1.1rem #f6f6f6 inset;
+	}
+	.portfolio {
+		padding:0;
+	}
+	.portfolio .work {
+		position:relative;
+		height:auto;
+	}
+	.portfolio .work-title {
+	    position: relative;
+	    top: auto;
+	    transform: translateY(-50px);
+	    width: 80%;
+	    padding: 10% 5%;
+	}
+	p, .portfolio a {
+	    font-size: 1.25rem;
+	    line-height: 1.85rem;
+	}
+	.portfolio a {
+		box-shadow: 0 1.28rem #fff inset;
+	}
+	.portfolio img {
+		position:relative;
+	}
+	.outro {
+		margin:0 auto;
+	}
+	.outro .row:first-child {
+		margin-top:0;
+	}
+}
+
