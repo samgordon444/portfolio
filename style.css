@@ -72,6 +72,18 @@ header {
 }
 
 /* ----- INTRO ----- */
+.skipintro {
+	position:fixed;
+	bottom:50px;
+	right:100px;
+	font-size:1rem;
+	line-height:1rem;
+	color:#777;
+}
+.skipintro:hover {
+	color:#524B59;
+	text-decoration:underline;
+}
 .intro {
 	margin:200px auto 100px;
 }
@@ -121,6 +133,9 @@ a.cleared:hover {
 .intro .visible {
 	opacity:1;
 	pointer-events: auto;
+}
+.hidden {
+	display:none;
 }
 
 /* ----- PORTFOLIO ----- */

@@ -8,6 +8,19 @@ $('a.continue').click( function() {
 $('a.showall').click( function() {
 	$('.portfolio').addClass('exists');
 	$('.outro').addClass('exists');
+	$('.skipintro').addClass('hidden');
+} );
+$('a.skipintro').click( function() {
+	$(this).addClass('hidden');
+	$('.intro span').addClass('exists visible');
+	$('.portfolio').addClass('exists');
+	$('.outro').addClass('exists');
+} );
+
+// SMOOTH SCROLL
+$(".skipintro").click(function(event) {
+	event.preventDefault();
+$('html,body').animate( { scrollTop:$(this.hash).offset().top } , 1000);
 } );
 
 // // BG IMAGE
