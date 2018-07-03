@@ -7,6 +7,7 @@ $('a.continue').click( function() {
 } );
 $('a.showall').click( function() {
 	$('.portfolio').addClass('exists');
+	$('.portfolio').addClass('portvisible');
 	$('.outro').addClass('exists');
 	$('.skipintro').addClass('hidden');
 } );

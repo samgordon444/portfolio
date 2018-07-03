@@ -13,7 +13,7 @@ body{
 	to {opacity:1;}
 }
 .row {
-	margin:100px auto;
+	margin:150px auto;
 }
 span, h1, p, a {
 	font-family:'Ovo';
@@ -85,7 +85,10 @@ header {
 	text-decoration:underline;
 }
 .intro {
-	margin:200px auto 100px;
+	margin: 200px auto 100px;
+}
+.intro .row {
+	margin-bottom: 0;
 }
 .intro span {
 	pointer-events: none;
@@ -140,10 +143,21 @@ a.cleared:hover {
 
 /* ----- PORTFOLIO ----- */
 .portfolio {
-	display:none;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.6s;
+}
+.portvisible {
+	opacity: 1 !important;
+	height: auto !important;
+	overflow: default !important;
+	pointer-events: auto;
 }
 .portfolio .work {
 	position:relative;
+	max-height: 600px;
+	overflow: hidden;
 }
 .portfolio .work-title {
 	position:absolute;
@@ -182,7 +196,7 @@ a.cleared:hover {
 
 /* ----- OUTRO ----- */
 .outro {
-	margin:100px auto;
+	margin:50px auto;
 	display:none;
 }
 .outro span {
@@ -228,13 +242,15 @@ a.cleared:hover {
 	.portfolio .work {
 		position:relative;
 		height:auto;
+		max-height: none;
 	}
 	.portfolio .work-title {
 	    position: relative;
 	    top: auto;
-	    transform: translateY(-50px);
+	    transform: translate(-50%, -50px);
 	    width: 80%;
 	    padding: 40px 20px;
+	    left: 50%;
 	}
 	p, .portfolio a {
 	    font-size: 1.25rem;
