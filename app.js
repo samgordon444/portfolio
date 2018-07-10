@@ -15,14 +15,16 @@ $('a.skipintro').click( function() {
 	$(this).addClass('hidden');
 	$('.intro span').addClass('exists visible');
 	$('.portfolio').addClass('exists');
+	$('.portfolio').addClass('portvisible');
 	$('.outro').addClass('exists');
 } );
 
 // SMOOTH SCROLL
 $(".skipintro").click(function(event) {
 	event.preventDefault();
-$('html,body').animate( { scrollTop:$(this.hash).offset().top } , 1000);
-} );
+	$('html,body').animate( { scrollTop:$(this.hash).offset().top } , 1000);
+	} 
+);
 
 // // BG IMAGE
 
