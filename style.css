@@ -22,7 +22,7 @@ span, h1, p, a {
 	line-height:3.25rem;
 	color:#524B59;
 }
-p, .portfolio a {
+p, .portfolio a, .casestudy a {
 	font-size:1.5rem;
 	line-height:2.25rem;
 }
@@ -66,6 +66,9 @@ header {
 	left:40px;
 	right:40px;
 	z-index:1000;
+}
+header a {
+	all: unset;
 }
 .logo {
 	position: fixed;
@@ -160,7 +163,7 @@ a.cleared:hover {
 }
 
 /* ----- PORTFOLIO ----- */
-.portfolio {
+.home .portfolio {
 	height: 0;
 	overflow: hidden;
 	opacity: 0;
@@ -172,12 +175,12 @@ a.cleared:hover {
 	overflow: default !important;
 	pointer-events: auto;
 }
-.portfolio .work {
+.portfolio .work, .casestudy .work {
 	position:relative;
 	max-height: 600px;
 	overflow: hidden;
 }
-.portfolio .work-title {
+.portfolio .work-title, .casestudy .work-title {
 	position:absolute;
 	left:0;
 	top:50%;
@@ -186,20 +189,20 @@ a.cleared:hover {
 	background:#fff;
 	padding:80px 50px;
 }
-.portfolio h1 {
+.portfolio h1, .casestudy h1 {
 	line-height:2rem;
 	margin-top:0;
 }
-.portfolio p {
+.portfolio p, .casestudy p {
 	margin-bottom:0;
 }
-.portfolio a {
+.portfolio a, .casestudy a {
 	box-shadow: 0 1.6rem #fff inset;
 }
-.portfolio a:hover {
+.portfolio a:hover, .casestudy a:hover {
 	box-shadow: 0 1rem #fff inset;
 }
-.portfolio a:before {
+.portfolio a:before, .casestudy a:before{
     content: '';
     background: white;
     width: 100%;
@@ -207,10 +210,18 @@ a.cleared:hover {
     position: absolute;
     top: -1px;
 }
-.portfolio img {
+.portfolio img, .casestudy img{
 	width:100%;
 	line-height:0;
 }
+
+.casestudy-detail {
+	background: #fff;
+}
+.casestudy-detail .container {
+	padding: 0 50px;
+}
+
 
 /* ----- OUTRO ----- */
 .outro {
