@@ -21,7 +21,7 @@
 @media (min-width:450px){
 	/* inner gutter */
 	.column,.columns{margin-left:1.6936%}
-	.column:first-child,.columns:first-child{margin-left:0}
+	.column:first-child,.columns:first-child, .gridclear {margin-left:0}
 	/* column widths - column to gutter ratio of 4:1; */
 	.one.column,.one.columns{width:6.78%}
 	.two.columns{width:15.255%}

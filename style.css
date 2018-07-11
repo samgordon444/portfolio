@@ -15,16 +15,23 @@ body{
 .row {
 	margin:150px auto;
 }
-span, h1, p, a {
+span, h1, h2, h3, p, a {
 	font-family:'Ovo';
 	font-weight:400;
 	font-size:2.25rem;
 	line-height:3.25rem;
 	color:#524B59;
 }
-p, .portfolio a, .casestudy a {
-	font-size:1.5rem;
-	line-height:2.25rem;
+h2 {
+	font-size: 1.75rem;
+	line-height: 2.25rem;
+}
+h3 {
+	font-size: 1.25rem;
+}
+p {
+	font-size:1.25rem;
+	line-height:1.75rem;
 }
 a {
 	position:relative;
@@ -67,7 +74,7 @@ header {
 	right:40px;
 	z-index:1000;
 }
-header a {
+header a.logolink {
 	all: unset;
 }
 .logo {
@@ -188,6 +195,30 @@ a.cleared:hover {
 	width:40%;
 	background:#fff;
 	padding:80px 50px;
+	z-index: 1;
+}
+.portnav {
+	position: fixed;
+	top:40px;
+	right:40px;
+	z-index:1000;
+}
+.portnav a{
+	all: unset;
+	font-family:'Ovo';
+	font-weight:400;
+	font-size:1rem;
+	line-height:2rem;
+	color:#524B59;
+	transition: all 0.25s;
+}
+.portnav a:hover {
+	text-decoration: underline;
+	color: #D6BA73;
+}
+.work-title span, .work-title a, .worknext a {
+	font-size: 1.5rem;
+	line-height: 2.25rem;
 }
 .portfolio h1, .casestudy h1 {
 	line-height:2rem;
@@ -202,7 +233,7 @@ a.cleared:hover {
 .portfolio a:hover, .casestudy a:hover {
 	box-shadow: 0 1rem #fff inset;
 }
-.portfolio a:before, .casestudy a:before{
+.portfolio a:before, .casestudy a:before {
     content: '';
     background: white;
     width: 100%;
@@ -220,6 +251,13 @@ a.cleared:hover {
 }
 .casestudy-detail .container {
 	padding: 0 50px;
+}
+.roletag {
+	font-size: 0.75rem;
+	color: #666;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 0;
 }
 
 
@@ -244,6 +282,60 @@ a.cleared:hover {
 	display:block;
 }
 
+
+.viewwork-hover {
+  position:absolute;
+  display:inline-block;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background:#D6BA73;
+  transition:all 0.5s;
+  opacity: 0;
+}
+.viewwork {
+  display:inline-block;
+  position:absolute;
+  right:100px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:100;
+  font-family:'Ovo';
+  font-weight:400;
+  font-size:1rem;
+  line-height:1rem;
+  color:#524B59;
+}
+.viewwork:before{
+  content:'';
+  width:200%;
+  padding-top:200%;
+  border-radius:100%;
+  background:#fff;
+  display:inline-block;
+  position:absolute;
+  transform:translate(-50%, -50%);
+  top:50%;
+  left:50%;
+  transition:all 0.4s;
+  z-index:-1;
+}
+a.viewwork-button {
+	all: unset;
+}
+a.viewwork-button:hover .viewwork{
+	text-decoration: underline;
+	cursor: pointer;
+}
+a.viewwork-button:hover + .viewwork-hover {
+  opacity: 0.5;
+}
+.mobile-viewwork {
+	display: none;
+}
+
+
 @media only screen and (max-width:800px){
 	.row {
 		margin:60px auto;
@@ -252,12 +344,22 @@ a.cleared:hover {
 		margin:120px auto 0;
 	}
 	header {
-		top:50px;
 		left:20px;
+		position: absolute;
 	}
-	span, h1, p, a {
+	.logo {
+		position: absolute;
+	}
+	.portnav {
+		position: absolute;
+		right: 20px;
+	}
+	span, p, a {
 	    font-size: 1.5rem;
 	    line-height: 2.35rem;
+	}
+	h1 {
+		font-size: 1.75rem;
 	}
 	a {
 		box-shadow: 0 1.58rem #f6f6f6 inset;
@@ -268,31 +370,28 @@ a.cleared:hover {
 	.portfolio {
 		padding:0;
 	}
-	.portfolio .work {
+	.portfolio .work, .casestudy .work {
 		position:relative;
 		height:auto;
 		max-height: none;
 	}
-	.portfolio .work-title {
+	.portfolio .work-title, .casestudy .work-title {
 	    position: relative;
-	    top: auto;
-	    transform: translate(-50%, -50px);
-	    width: 80%;
+	    width: auto;
 	    padding: 40px 20px;
-	    left: 50%;
-	}
-	p, .portfolio a {
-	    font-size: 1.25rem;
-	    line-height: 1.85rem;
-	}
-	.portfolio a {
-		box-shadow: 0 1.35rem #fff inset;
-	}
-	.portfolio a:hover {
-		box-shadow: 0 0.8rem #fff inset;
+	    left: 0;
+	    top: 0;
+	    transform: none;
 	}
 	.portfolio img {
 		position:relative;
+	}
+	.casestudy {
+		padding: 50px 20px;
+		height: auto;
+	}
+	.casestudy-detail .container {
+		padding: 20px;
 	}
 	.outro {
 		margin:0 auto;
@@ -300,5 +399,12 @@ a.cleared:hover {
 	.outro .row:first-child {
 		margin-top:0;
 	}
+	.viewwork {
+	  display: none;
+	}
+	.mobile-viewwork {
+		display: block;
+		margin-top: 30px;
+		text-align: center;
+	}
 }
-
