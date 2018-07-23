@@ -66,6 +66,12 @@ a:hover, a:active, a:focus {
   }
 }
 
+video {
+	width: 100%    !important;
+  	height: auto   !important;
+  	margin-top: -5px;
+}
+
 /* ----- HEADER ----- */
 header {
 	position: absolute;
@@ -215,6 +221,7 @@ a.cleared:hover {
 .portnav a:hover {
 	text-decoration: underline;
 	color: #D6BA73;
+	cursor: pointer;
 }
 .work-title span, .work-title a, .worknext a {
 	font-size: 1.5rem;
@@ -258,6 +265,19 @@ a.cleared:hover {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	line-height: 0;
+}
+.newtag:before {
+	content: 'NEW';
+	position: absolute;
+	top: -50px;
+	left: 0;
+	padding: 10px;
+	font-size: 0.75rem;
+	font-family:'Muli';
+	letter-spacing: 2px;
+	font-weight:800;
+	color:#524B59;
+	background: #D6BA73;
 }
 
 
