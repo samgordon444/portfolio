@@ -119,7 +119,7 @@ header a.logolink {
 	text-decoration:underline;
 }
 .intro {
-	margin: 150px auto 0;
+	margin: 200px auto 0;
 }
 .intro .row {
 	margin-bottom: 0;
@@ -129,13 +129,6 @@ header a.logolink {
 	display:none;
 	opacity:0;
 	transition: all 0.6s;
-}
-.intro p {
-	font-family:'Ovo';
-	font-weight:400;
-	font-size:2.25rem;
-	line-height:3.25rem;
-	color:#524B59;
 }
 .intro .hi {
 	position:relative;
@@ -181,44 +174,13 @@ a.cleared:hover {
 .hidden {
 	display:none;
 }
-.scrollhint {
-	position:absolute;
-	right:100px;
-	bottom:100px;
-}
-.scrollhint img {
-	animation: scrollhint 1s 1.5s infinite alternate ease-in-out;
-}
-.scrollhint:before {
-	content: url(assets/arrowdown.svg);
-	position:absolute;
-	transform:translateY(-150%);
-	left:0;
-	top:0;
-	fill: red;
-	animation: scrollhint 1s 0.75s infinite alternate ease-in-out;
-}
-.scrollhint:after {
-	content: url(assets/arrowdown.svg);
-	position:absolute;
-	transform:translateY(150%);
-	left:0;
-	top:0;
-	animation: scrollhint 1s 0s infinite alternate ease-in-out;
-}
-@keyframes scrollhint {
-	0% { opacity: 1;}
-	80% { opacity: 0;}
-	100% { opacity: 0; }
-}
 
 /* ----- PORTFOLIO ----- */
 .home .portfolio {
+	height: 0;
 	overflow: hidden;
+	opacity: 0;
 	transition: all 0.6s;
-}
-.portfolio .row:last-child {
-	margin-bottom:0;
 }
 .portvisible {
 	opacity: 1 !important;
@@ -249,15 +211,12 @@ a.cleared:hover {
 }
 .portnav a{
 	all: unset;
-	font-family:'Muli';
-	font-weight:600;
-	font-size:0.8rem;
+	font-family:'Ovo';
+	font-weight:400;
+	font-size:1rem;
 	line-height:2rem;
 	color:#524B59;
 	transition: all 0.25s;
-	text-transform:uppercase;
-	letter-spacing: 1px;
-	margin-left:40px;
 }
 .portnav a:hover {
 	text-decoration: underline;
@@ -323,17 +282,19 @@ a.cleared:hover {
 
 
 /* ----- OUTRO ----- */
+.outro {
+	margin:50px auto;
+	display:none;
+}
+.outro span {
+	display:inline-block;
+	opacity:1;
+	pointer-events: visible;
+}
 .footer {
 	font-family:'Muli';
 	font-size:0.92rem;
 	color:#999;
-}
-.outro p {
-	font-family:'Ovo';
-	font-weight:400;
-	font-size:2.25rem;
-	line-height:3.25rem;
-	color:#524B59;
 }
 
 /* ----- REVEAL END-STATE ----- */
@@ -426,13 +387,6 @@ a.viewwork-button:hover + .viewwork-hover {
 	a:hover, a:active, a:focus {
 		box-shadow: 0 1rem #f6f6f6 inset;
 	}
-	.intro p, .outro p {
-		font-size: 1.5rem;
-		line-height:1.5;
-	}
-	.scrollhint {
-		display:none;
-	}
 	.portfolio {
 		padding:0;
 	}
@@ -460,7 +414,7 @@ a.viewwork-button:hover + .viewwork-hover {
 		padding: 20px;
 	}
 	.outro {
-		margin:60px auto 0;
+		margin:0 auto;
 	}
 	.outro .row:first-child {
 		margin-top:0;
@@ -472,8 +426,5 @@ a.viewwork-button:hover + .viewwork-hover {
 		display: block;
 		margin-top: 30px;
 		text-align: center;
-	}
-	.portnav a:not(:last-child) {
-		display:none;
 	}
 }
