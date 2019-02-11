@@ -363,11 +363,14 @@ a.cleared:hover {
   top:50%;
   transform:translateY(-50%);
   z-index:100;
-  font-family:'Ovo';
-  font-weight:400;
-  font-size:1rem;
+  font-family:'Muli';
+  font-weight:600;
+  font-size:0.8rem;
   line-height:1rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
   color:#524B59;
+  text-align:center;
 }
 .viewwork:before{
   content:'';
