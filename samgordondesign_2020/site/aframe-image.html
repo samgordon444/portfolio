@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>moved script</title>
+    <title>added text</title>
     <!-- import aframe and then ar.js with image tracking / location based features -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -46,19 +46,10 @@
              type='nft' url='https://samgordon.design/samgordondesign_2020/site/ar-descriptors/DSCF4351-medium'
              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
              <a-box color="tomato" depth="5" height="4" width="10"></a-box>
+             <div>THIS IS TEXT</div>
          </a-nft>
      <a-entity camera></a-entity>
      </a-scene>
  </body>
- <script>
-  AFRAME.registerComponent('markerhandler', {
-    init: function () {
-      this.el.sceneEl.addEventListener('markerFound', () => {
-        // redirect to custom URL
-        window.location = 'https://github.com/AR-js-org/AR.js';
-      });
-    }
-  })
-</script>
  
 </html>
