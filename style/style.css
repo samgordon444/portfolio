@@ -88,6 +88,7 @@ a {
 a:hover {
     color:#6D7298;
     border-bottom:2px solid #222;
+    cursor: pointer;
 }
 span.myname {
     border-bottom: 2px solid transparent;
@@ -197,9 +198,11 @@ span.myname {
     min-height: 400px;
     padding:150px 0 0;
     background-color:#222;
-    background-image:url(../assets/bg.jpg);
+    background-image:url(../assets/DR-project-cover.jpg);
     background-size: cover;
     background-position: center center;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
     flex-grow:1;
     color:#fff;
     display: flex;
@@ -208,7 +211,8 @@ span.myname {
     border-bottom:none;
 }
 .projects .item:hover {
-    background-position:left top;
+    -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0);
 }
 .projects .item:hover .project-title {
     border-bottom: 2px solid #fff;
@@ -228,6 +232,9 @@ span.myname {
 /* ARTICLES */
 /* ---------------------------- */
 
+.articles {
+    margin-top:80px;
+}
 .articles .item {
     margin-bottom:50px;
     padding-left:40px;
@@ -273,16 +280,18 @@ span.myname {
     background:white;
     padding-right:10px;
 }
-.read-time:after {
-    content: '';
-    display: inline-block;
-    height: 2px;
-    width: 100%;
-    background: #222;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    z-index:-1000;
+@media (max-width:1024px) {
+    .read-time:after {
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 100%;
+        background: #222;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        z-index:-1000;
+    }
 }
 
 /* ---------------------------- */
@@ -302,10 +311,10 @@ footer a {
     text-decoration:none;
     color:#222;
 }
-footer a:hover {
+/* footer a:hover {
     color:#fff;
     background:#222;
-}
+} */
 @media (max-width:1024px){
     footer .subscribe, footer .contact {
         padding-top:50px;
