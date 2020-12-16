@@ -13,9 +13,27 @@ body{
 
 header {
     margin:50px 0;
+    width:100%;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
 }
-.center {
-    text-align:center;
+header span {
+    flex-grow: 1;
+    text-align: center;
+}
+@media (min-width:1024px){
+    header {
+        flex-direction: row;
+    }
+    header span {
+        flex-grow: 1;
+        text-align: left;
+    }
+    header span.mytitle {
+        text-align: right;
+    }
 }
 .sans-16 {
     display:inline-block;
@@ -75,9 +93,16 @@ span.myname {
     border-bottom: 2px solid transparent;
 }
 .medium-indicator {
-    width:30px;
+    width:20px;
     position:absolute;
-    margin-top:15px;
+    margin-top:12px;
+    margin-left:5px;
+}
+@media (min-width:1024px){
+    .medium-indicator {
+        width:30px;
+        margin-top:15px;
+    }
 }
 
 /* ---------------------------- */
@@ -85,20 +110,37 @@ span.myname {
 /* ---------------------------- */
 
 .hero {
-    margin:100px 0 150px;
+    margin:60px 0 60px;
+}
+@media (min-width:1024px) and (min-height:650px) {
+    .hero {
+        margin:80px 0 120px;
+    }
 }
 .article .hero {
     margin:100px 0;
 }
 .topic {
+    width:100%;
     margin-bottom:20px;
+    text-align: center;
+}
+@media (min-width:1024px) {
+    .topic {
+        text-align: left;
+    }
 }
 .hero-title {
     font-family:'Lora';
-    font-size:80px;
+    font-size:40px;
     font-weight:700;
-    line-height:100px;
-    margin:0 0 20px 0;
+    line-height:56px;
+}
+@media (min-width:1024px){
+    .hero-title {
+        font-size:80px;
+        line-height:100px;
+    }
 }
 .hero-title a:hover {
     background: url(../assets/text-bg@2x.png);
@@ -152,7 +194,7 @@ span.myname {
 }
 .projects .item {
     width:100%;
-    min-height:500px;
+    min-height: 400px;
     padding:150px 0 0;
     background-color:#222;
     background-image:url(../assets/bg.jpg);
@@ -177,6 +219,9 @@ span.myname {
         flex-direction: column;
         margin-bottom:0;
     }
+    .projects .item {
+        min-height: none;
+    }
 }
 
 /* ---------------------------- */
@@ -185,7 +230,7 @@ span.myname {
 
 .articles .item {
     margin-bottom:50px;
-    padding-left:50px;
+    padding-left:40px;
     position:relative;
 }
 .articles .item:before {
@@ -193,7 +238,16 @@ span.myname {
     position:absolute;
     top:0;
     left:0;
-    width:30px;
+    transform-origin: left center;
+    transform:scale(0.75);
+}
+@media (min-width:1024px) {
+    .articles .item {
+        padding-left:50px;
+    }
+    .articles .item:before {
+        transform:scale(1);
+    }
 }
 .articles .item:last-child {
     margin-bottom:0;
@@ -296,4 +350,12 @@ footer a:hover {
 .lacroix3 {
     top:35%;
     right:5%;
+}
+
+
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
 }
