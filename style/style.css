@@ -153,17 +153,6 @@ span.myname {
     border-bottom:4px solid #222;
 }
 
-/* ---------------------------- */
-/* MAIN */
-/* ---------------------------- */
-
-@media (min-width:1024px){
-    .main {
-        display: -ms-flex;
-        display: -webkit-flex;
-        display: flex;
-    }
-}
 
 /* ---------------------------- */
 /* PROJECTS */
@@ -186,29 +175,30 @@ span.myname {
 }
 .project-title {
     margin:0;
+    text-align:center;
+    display:inline-block;
 }
 .project-title a {
     color:#fff;
+    width:auto;
 }
 .project-title a:hover {
     border-bottom:2px solid #fff;
 }
 .projects .item {
+    display:inline-block;
     width:100%;
-    min-height: 400px;
-    padding:150px 0 0;
+    height: 400px;
+    padding: 150px 0 0;
     background-color:#222;
     background-image:url(../assets/DR-project-cover.jpg);
     background-size: cover;
     background-position: center center;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
-    flex-grow:1;
     color:#fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-bottom:none;
+    text-align:center;
 }
 .projects .item:hover {
     -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
@@ -216,16 +206,6 @@ span.myname {
 }
 .projects .item:hover .project-title {
     border-bottom: 2px solid #fff;
-}
-@media (min-width:1024px){
-    .projects {
-        display:flex;
-        flex-direction: column;
-        margin-bottom:0;
-    }
-    .projects .item {
-        min-height: none;
-    }
 }
 
 /* ---------------------------- */
